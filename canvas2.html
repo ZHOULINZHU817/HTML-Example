@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id='drawing' width='200' height='200'></canvas>>
+	<script type="text/javascript">
+		var drawing = document.getElementById('drawing');
+		var context = drawing.getContext('2d');
+		var radialGradient = context.createRadialGradient(50,50,0,50,50,50);
+		radialGradient.addColorStop(0,'red');
+		radialGradient.addColorStop(0.5,'green');
+		radialGradient.addColorStop(1,'blue');
+		context.fillStyle = radialGradient;
+		context.fillRect(0,0,100,100);
+	</script>
+</body>
+</html>
